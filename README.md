@@ -1,3 +1,3 @@
 # ShayanPortfolio
 Modern Responsive Portfolio Website - Built with HTML, CSS &amp; JavaScript. Features smooth animations, contact forms, project showcase, skills section and fully responsive design. Perfect for developers to showcase their work.
-![Portfolio Section]([https://raw.githubusercontent.com/CoderShayan/ShayanPortfolio/refs/heads/main/hero.png](https://github.com/CoderShayan/ShayanPortfolio/blob/main/Hero.png])
+![Portfolio Section](https://github.com/CoderShayan/ShayanPortfolio/blob/84a7cacb34e8466696c516aeda31d619435d75a4/Hero.png)
