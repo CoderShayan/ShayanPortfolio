@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohd Shayan Anwar — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="theme-color" content="#07102a">
+  <meta name="description" content="Mohd Shayan Anwar - BCA Graduate, Tech Enthusiast and Web Developer Portfolio">
+</head>
+<body>
+
+  <!-- Decorative hero background -->
+  <div id="hero-bg" aria-hidden="true"></div>
+
+  <!-- Top progress bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header id="site-header" class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#hero">
+        <span class="brand-shayan">Shayan</span>
+        <span class="brand-portfolio">Portfolio</span>
+      </a>
+
+      <nav id="nav" class="main-nav">
+        <a href="#hero">Home</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Connect</a>
+      </nav>
+
+      <button id="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-bg">
+        <canvas id="hero-canvas"></canvas>
+      </div>
+
+      <div class="hero-grid container">
+        <!-- LEFT -->
+        <div class="hero-left">
+          <div class="eyebrow">Hello, I'm</div>
+          <h1 class="hero-title">
+            Mohd <span class="accent">Shayan</span> Anwar
+          </h1>
+          <p class="hero-tagline">
+            <span class="tag-item"><i class="fa-solid fa-graduation-cap"></i> BCA Graduate</span>
+            <span class="sep">|</span>
+            <span class="tag-item"><i class="fa-solid fa-book"></i> Learner</span>
+            <span class="sep">|</span>
+            <span class="tag-item"><i class="fa-solid fa-laptop-code"></i> Tech Enthusiast</span>
+          </p>
+          <p class="hero-lead">
+            I'm someone who believes in continuous learning and creating meaningful solutions through my skills and knowledge. 
+            I prefer practical knowledge over theoretical. I enjoy every step of learning and creating something new because 
+            "Reaching the destination is important, but enjoying every step of the journey makes it truly worthwhile."
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">Explore Projects</a>
+            <button id="contact-toggle" class="btn btn-outline" aria-expanded="false">
+              <i class="fa fa-address-card"></i> Show Contact
+            </button>
+          </div>
+
+          <!-- CONTACT MODAL -->
+          <div id="contact-modal" class="modal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-container contact-modal-container">
+              <canvas id="contact-canvas"></canvas>
+              <div class="modal-content contact-modal-content">
+                <span id="close-contact" class="close-btn">&times;</span>
+                <h3><i class="fa fa-address-card"></i> Contact Information</h3>
+                <div class="contact-info-modal">
+                  
+                  <div class="contact-item-modal">
+                    <i class="fa fa-user"></i>
+                    <div>
+                      <span class="contact-value">Mohd Shayan Anwar</span>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-item-modal">
+                    <i class="fa fa-phone"></i>
+                    <div>
+                      <a href="tel:+919621021063" class="contact-value">+91 96210 21063</a>
+                    </div>
+                  </div>
+
+                  <div class="contact-item-modal">
+                    <i class="fa fa-envelope"></i>
+                    <div>
+                      <a href="mailto:its.mshayan@gmail.com" class="contact-value">its.mshayan@gmail.com</a>
+                    </div>
+                  </div>
+
+                  <div class="contact-item-modal">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                      <a href="https://www.linkedin.com/in/mohdshayananwar" target="_blank" class="contact-value">linkedin.com/in/mohdshayananwar</a>
+                    </div>
+                  </div>
+
+                  <div class="contact-item-modal">
+                    <i class="fab fa-github"></i>
+                    <div>
+                      <a href="https://github.com/CoderShayan" target="_blank" class="contact-value">github.com/CoderShayan</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Profile card -->
+        <div class="hero-right">
+          <aside class="profile-card">
+            <div class="profile-ring">
+              <img id="profile-img" src="profile-pic.jpg" alt="Mohd Shayan Anwar"
+                  onerror="this.style.display='none'; 
+                  document.getElementById('profile-fallback').style.display='flex';">
+            </div>
+            <div id="profile-fallback" class="profile-fallback" style="display:none">MSA</div>
+
+            <div class="profile-body">
+              <h3 class="profile-name">Mohd Shayan Anwar</h3>
+              <p class="muted">Transforming ideas into digital reality through code & creativity.</p>
+              <br>
+              <button id="book-appointment" class="btn btn-primary">
+                <i class="fa fa-calendar-check-o"></i> Book Appointment
+              </button>
+
+              <nav class="socials">
+                <a class="social" href="https://www.linkedin.com/in/mohdshayananwar" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="social" href="https://github.com/CoderShayan" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a class="social" href="https://www.instagram.com/https.shayan.ig/" target="_blank" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="social" href="https://www.facebook.com/mohammadshayan.anwar/" target="_blank" aria-label="Facebook">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </nav>
+
+            </div>
+          </aside>
+
+          <a href="#education" class="scroll-indicator">
+            <span class="mouse"><span class="wheel"></span></span>
+            <span class="scroll-text muted">Scroll to explore</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section reveal">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+        <div class="cards-grid">
+          
+          <article class="edu-card card-animated">
+            <div class="card-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Bachelor of Computer Applications (B.C.A.)</h3>
+            <p class="muted">Dr. Virendra Swaroop Institute of Computer Studies | 2024</p>
+          </article>
+          
+          <article class="edu-card card-animated">
+            <div class="card-icon">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <h3>Intermediate (12th)</h3>
+            <p class="muted">Christ Church Intermediate College | 2021</p>
+          </article>
+          
+          <article class="edu-card card-animated">
+            <div class="card-icon">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <h3>High School (10th)</h3>
+            <p class="muted">Christ Church Intermediate College | 2021</p>
+          </article>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-code"></i> Skills</h2>
+        <div class="skills-container">
+          <div class="skills-scroll" id="skills-scroll">
+            
+            <div class="skill-card" data-skill="programming">
+              <i class="fa-solid fa-keyboard skill-ico" aria-hidden="true"></i>
+              <h4>Programming</h4>
+              <p class="muted">C · C++ · Java · Python</p>
+            </div>
+            
+            <div class="skill-card" data-skill="frontend">
+              <i class="fa-brands fa-html5 skill-ico" aria-hidden="true"></i>
+              <h4>Frontend</h4>
+              <p class="muted">HTML · CSS · JavaScript</p>
+            </div>
+            
+            <div class="skill-card" data-skill="tools">
+              <i class="fa-solid fa-screwdriver-wrench skill-ico" aria-hidden="true"></i>
+              <h4>Tools & Frameworks</h4>
+              <p class="muted">Tkinter · Git · VSCode</p>
+            </div>
+            
+            <div class="skill-card" data-skill="platforms">
+              <i class="fa-solid fa-network-wired skill-ico" aria-hidden="true"></i>
+              <h4>Platforms</h4>
+              <p class="muted">Linux · Windows</p>
+            </div>
+
+            <div class="skill-card" data-skill="soft-skills">
+              <i class="fa-solid fa-handshake skill-ico" aria-hidden="true"></i>
+              <h4>Soft Skills</h4>
+              <p class="muted">Teamwork · Hard Working · Problem Solving</p>
+            </div>
+
+          </div>
+          <div class="skills-nav">
+            <button class="skill-nav-btn prev-btn" aria-label="Previous skill">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            
+            <div class="skill-dots">
+              <span class="skill-dot active" data-index="0"></span>
+              <span class="skill-dot" data-index="1"></span>
+              <span class="skill-dot" data-index="2"></span>
+              <span class="skill-dot" data-index="3"></span>
+              <span class="skill-dot" data-index="4"></span>
+            </div>
+            
+            <button class="skill-nav-btn next-btn" aria-label="Next skill">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section reveal">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Certifications</h2>
+        <div class="cards-grid">
+          
+          <article class="cert-card card-animated">
+            <div class="card-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>Certificate in Computing</h3>
+            <p class="muted">Data Point</p>
+          </article>
+          
+          <article class="cert-card card-animated">
+            <div class="card-icon">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <h3>Java</h3>
+            <p class="muted">SK Deft</p>
+          </article>
+          
+          <article class="cert-card card-animated">
+            <div class="card-icon">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <h3>Python</h3>
+            <p class="muted">Skilling Digitally Xcellent Communities Program</p>
+          </article>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-folder-open"></i> Projects</h2>
+        <div class="cards-grid">
+          
+          <article class="project-card card-animated">
+            <div class="project-image">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3>Portfolio Website</h3>
+            <p class="muted">Responsive personal portfolio built with HTML, CSS and JavaScript. Features modern design with smooth animations and interactive elements.</p>
+            <div class="project-actions">
+              <a href="https://github.com/codershayan/Portfolio" target="_blank" class="btn btn-outline">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </article>
+          
+          <article class="project-card card-animated">
+            <div class="project-image">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <h3>Stock Management System</h3>
+            <p class="muted">Python + Tkinter desktop application for managing inventory and stock records with database integration and user-friendly interface.</p>
+            <div class="project-actions">
+              <a href="https://github.com/CoderShayan/Stock-Management-System" target="_blank" class="btn btn-outline">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-envelope"></i> Let's Connect</h2>
+        <div class="contact-grid">
+          <!-- Left Side - Content -->
+          <div class="contact-content">
+            <h3>Get In Touch</h3>
+            <p class="contact-lead">
+              I'm always interested in new opportunities, collaborations, and interesting projects. 
+              Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>its.mshayan@gmail.com</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <div>
+                  <h4>Location</h4>
+                  <p>Kanpur, Uttar Pradesh</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-socials">
+              <h4>Connect With Me</h4>
+              <div class="social-links">
+                
+                <a href="https://www.linkedin.com/in/mohadshayananwar" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="https://github.com/CoderShayan" target="_blank" title="GitHub" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.instagram.com/https.shayan.ig/" target="_blank" title="Instagram" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Side - Contact Form -->
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="main-contact-form">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?">
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." rows="5" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- APPOINTMENT MODAL -->
+  <div id="appointment-modal" class="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container appointment-container">
+      <canvas id="appointment-canvas"></canvas>
+      <div class="modal-content appointment-modal-content">
+        <span id="close-appointment" class="close-btn">&times;</span>
+        <h3><i class="fa fa-calendar-check-o"></i> Book Appointment</h3>
+        <p class="modal-subtitle">Let's discuss your project requirements in detail</p>
+        
+        <form id="appointment-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointment-name">Full Name *</label>
+              <input type="text" id="appointment-name" name="name" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="appointment-email">Email Address *</label>
+              <input type="email" id="appointment-email" name="email" placeholder="your.email@example.com" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointment-phone">Phone Number</label>
+              <input type="tel" id="appointment-phone" name="phone" placeholder="+91 XXXXX XXXXX">
+            </div>
+            
+            <div class="form-group">
+              <label for="appointment-date">Preferred Date</label>
+              <input type="date" id="appointment-date" name="date">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="project-type">Project Type *</label>
+            <input type="text" id="project-type" name="projectType" placeholder="e.g., Web Development, Mobile App, Desktop App" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="budget-range">Budget Range (Optional)</label>
+            <input type="text" id="budget-range" name="budget" placeholder="e.g., ₹10,000 - ₹30,000">
+          </div>
+          
+          <div class="form-group">
+            <label for="project-details">Project Details *</label>
+            <textarea id="project-details" name="projectDetails" placeholder="Please describe your project requirements, features needed, timeline, and any specific technologies you prefer..." rows="4" required></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa fa-calendar-plus-o"></i> Schedule Appointment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!--=====================
+     EmailJS CDN 
+    =====================-->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your credentials
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); // EmailJS dashboard se key lein
+    })();
+  </script>
+  
+<!--======================================-->
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        &copy; 2025 Mohd Shayan Anwar. All rights reserved.
+      </div>
+      <div class="footer-right">
+        <span class="muted">Thank you for visiting my portfolio!</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
